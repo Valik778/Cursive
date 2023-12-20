@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style/styles.css" />
+    <link rel="stylesheet" href="dist/style/media.css" />
+  </head>
+  <body style="overflow-x: hidden">
+    <nav class="navbar">
+      <div class="logo">
+        <h4>ROBO.SCHOOL</h4>
+        <div class="hamburger-menu">
+          <button onclick="toggleMenu()">&#9776;</button>
+        </div>
+      </div>
+
+      <ul class="menu">
+        <li><a href="#Home">Про школу </a></li>
+        <li><a href="#Coucher">Тренери</a></li>
+        <li><a href="#Price">Вартість</a></li>
+      </ul>
+      <a href="" class="nav-num">+380 000 000 000</a>
+    </nav>
+    <header class="mb-5">
+      <div class="d-flex wrapper header-block">
+        <div class="header-desc">
+          <h1>ROBO SCHOOL</h1>
+          <p>
+            Курси підвищення кваліфікації з робототехніки для педагогів
+            початкової школи
+          </p>
+          <a class="btn bg-red" href="">Записаться на курс</a>
+        </div>
+        <div class="header-img">
+          <img class="front" src="dist/img/header_img.png" alt="header_img" />
+          <img class="back" src="dist/img/header_bg.png" alt="header_bg" />
+        </div>
+      </div>
+    </header>
+
+    <div id="Home" class="about wrapper mb-5">
+      <p class="about-desc">
+        <b>Robo School </b>– установа для формування кадрового педагогічного
+        резерву у сфері робототехніки програмування
+      </p>
+
+      <div class="d-flex">
+        <div class="count-card">
+          <p class="count" data-target="10">0</p>
+          <p class="count-desc">УМК з різних напрямків з робототехніки</p>
+        </div>
+        <div class="count-card">
+          <p class="count" data-target="20">0</p>
+          <p class="count-desc">Шкіл, в яких запущено робототехніку</p>
+        </div>
+        <div class="count-card">
+          <p class="count" data-target="1000">0</p>
+          <p class="count-desc">
+            Педагогів, що пройшли курси підвищення кваліфікації
+          </p>
+        </div>
+        <div class="count-card">
+          <p class="count" data-target="10000">0</p>
+          <p class="count-desc">Навчених дітей на базі власних центрів</p>
+        </div>
+      </div>
+    </div>
+    <div class="after-course wrapper mb-5">
+      <h4 class="main-titles">Що ви отримаєте після курсу</h4>
+      <div class="d-flex">
+        <div class="card">
+          <p class="card-title">Сертифікат</p>
+          <p class="card-desc">
+            Що дає право викладати робототехніку для дітей 6-12 років в освітніх
+            закладах
+          </p>
+        </div>
+        <div class="card">
+          <p class="card-title">Знання</p>
+          <p class="card-desc">
+            За основами розробки навчально-методичних комплексів з робототехніки
+            та програмування
+          </p>
+        </div>
+        <div class="card">
+          <p class="card-title">Практику</p>
+          <p class="card-desc">
+            Можливість пройти практику з викладання робототехніки на базі R:ED
+            LAB (в онлайн або онлайн форматі)
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Coucher" class="coaches wrapper mb-5">
+      <h4 class="main-titles">Професійні тренери</h4>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="coacher_1">
+            <div><img src="dist/img/coacher_1.png" alt="coacher_1" /></div>
+            <div class="swiper-card-info">
+              <p class="swiper-card-title">Ірина Лайм</p>
+              <p class="swiper-card-desc">викладач з робототехніки</p>
+              <a data-coacherID="coacher_1" class="swiper-btn">Детальніше</a>
+            </div>
+          </div>
+          <div class="swiper-slide" id="coacher_2">
+            <div><img src="dist/img/coacher_2.png" alt="coacher_2" /></div>
+            <div class="swiper-card-info">
+              <p class="swiper-card-title">Марина Орлова</p>
+              <p class="swiper-card-desc">викладач з робототехніки</p>
+              <a data-coacherID="coacher_2" class="swiper-btn">Детальніше</a>
+            </div>
+          </div>
+          <div class="swiper-slide" id="coacher_3">
+            <div><img src="dist/img/coacher_3.png" alt="coacher_3" /></div>
+            <div class="swiper-card-info">
+              <p class="swiper-card-title">Максим Петров</p>
+              <p class="swiper-card-desc">викладач із програмування</p>
+              <a data-coacherID="coacher_3" class="swiper-btn">Детальніше</a>
+            </div>
+          </div>
+          <div class="swiper-slide" id="coacher_4">
+            <div><img src="dist/img/coacher_4.png" alt="coacher_4" /></div>
+            <div class="swiper-card-info">
+              <p class="swiper-card-title">Костянтин Назаров</p>
+              <p class="swiper-card-desc">викладач з робототехніки</p>
+              <a data-coacherID="coacher_4" class="swiper-btn">Детальніше</a>
+            </div>
+          </div>
+          <div class="swiper-slide" id="coacher_5">
+            <div><img src="dist/img/coacher_5.png" alt="coacher_5" /></div>
+            <div class="swiper-card-info">
+              <p class="swiper-card-title">Ліза Весняна</p>
+              <p class="swiper-card-desc">викладач із програмування</p>
+              <a data-coacherID="coacher_5" class="swiper-btn">Детальніше</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-nav">
+          <div class="swiper-scrollbar"></div>
+          <div class="d-flex" style="justify-content: end; gap: 10px">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-body">
+        <span class="close">Закрити</span>
+        <div class="modal-content">
+          <div class="modal-coucher"></div>
+          <div class="tabs">
+            <button class="tablinks active" onclick="openTab(event, 'tab1')">
+              Освіта
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'tab2')">
+              Досвід роботи
+            </button>
+            <button class="tablinks" onclick="openTab(event, 'tab3')">
+              Нагороди
+            </button>
+          </div>
+          <div class="tabs-content">
+            <div id="tab1" class="tabcontent active">
+              <h3>Освіта</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+                illum quis consectetur, enim id corrupti sapiente expedita quo,
+                tempore ad esse necessitatibus, officiis iusto quas.
+              </p>
+              <p><b>Lorem ipsum dolor sit amet.</b></p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                ipsa error tempora, natus quia consectetur velit architecto qui,
+                rem fugit molestias in aut nobis repellendus quis? Ipsa
+                architecto fuga recusandae.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur vel doloremque esse quibusdam adipisci et ipsa rem
+                impedit inventore laboriosam. Aspernatur debitis ipsam odio
+                blanditiis!
+              </p>
+            </div>
+            <div id="tab2" class="tabcontent">
+              <h3>Досвід роботи</h3>
+              <p>This is the content for Досвід роботи</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat quod, ipsa ullam alias reprehenderit nobis. Dolore
+                quasi provident expedita nesciunt!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
+                maxime saepe explicabo harum repellat fugiat.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
+                maxime saepe explicabo harum repellat fugiat.
+              </p>
+            </div>
+            <div id="tab3" class="tabcontent">
+              <h3>Нагороди</h3>
+              <p>This is the content for Нагороди</p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat quod, ipsa ullam alias reprehenderit nobis. Dolore
+                quasi provident expedita nesciunt!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae,
+                maxime saepe explicabo harum repellat fugiat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Price" class="price wrapper mb-5">
+      <h4 class="main-titles">Виберіть потрібний пакет</h4>
+      <div class="d-flex">
+        <div class="price-card">
+          <p class="price-title">– PRO –</p>
+          <div>
+            <p class="price-count">20.000 &#x20B4;</p>
+            <p class="price-desc">УМК з робототхівників та програмування</p>
+          </div>
+          <a class="btn bg-red" href="">Записаться на курс</a>
+        </div>
+        <div class="price-card">
+          <p class="price-title">– ROBO –</p>
+          <div>
+            <p class="price-count">15.000 &#x20B4;</p>
+            <p class="price-desc">УМК з робототхівника</p>
+          </div>
+          <a class="btn bg-red" href="">Записаться на курс</a>
+        </div>
+        <div class="price-card">
+          <p class="price-title">– PROG –</p>
+          <div>
+            <p class="price-count">10.000 &#x20B4;</p>
+            <p class="price-desc">УМК із програмування</p>
+          </div>
+          <a class="btn bg-red" href="">Записаться на курс</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="contact">
+        <div class="wrapper">
+          <div class="d-flex">
+            <div class="info">
+              <h5>Запишіться на курс зі знижкою 10%</h5>
+              <p>Акція дійсна до 10 березня 2022 року</p>
+            </div>
+            <div class="contact-form">
+              <form id="contactForm">
+                <input
+                  placeholder="Ім'я"
+                  type="text"
+                  id="to_name"
+                  name="to_name"
+                  required
+                />
+                <input
+                  placeholder="Телефон"
+                  type="text"
+                  id="phone"
+                  name="phone"
+                  required
+                />
+                <input
+                  placeholder="E-mail"
+                  type="email"
+                  id="from_name"
+                  name="from_name"
+                  required
+                />
+                <button type="submit">Оформити заявку</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="logo">
+          <h4>ROBO.SCHOOL</h4>
+          <p class="copyright-syb">© ROBO.SCHOOL</p>
+        </div>
+        <a href="" class="nav-num">+380 000 000 000</a>
+      </div>
+    </footer>
+  </body>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+  <!-- Посилання на Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css"
+  />
+  <!-- Посилання на Swiper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+  <script>
+    var $swiperSelector = $(".swiper-container");
+
+    $swiperSelector.each(function (index) {
+      var $this = $(this);
+      $this.addClass("swiper-slider-" + index);
+
+      var dragSize = $this.data("drag-size") ? $this.data("drag-size") : 50;
+      var freeMode = $this.data("free-mode") ? $this.data("free-mode") : false;
+      var loop = $this.data("loop") ? $this.data("loop") : false;
+      var slidesDesktop = $this.data("slides-desktop")
+        ? $this.data("slides-desktop")
+        : 4;
+      var slidesTablet = $this.data("slides-tablet")
+        ? $this.data("slides-tablet")
+        : 2;
+      var slidesMobile = $this.data("slides-mobile")
+        ? $this.data("slides-mobile")
+        : 1;
+      var spaceBetween = $this.data("space-between")
+        ? $this.data("space-between")
+        : 20;
+
+      var swiper = new Swiper(".swiper-slider-" + index, {
+        direction: "horizontal",
+        loop: loop,
+        freeMode: freeMode,
+        spaceBetween: spaceBetween,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+          },
+          540: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          968: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          draggable: true,
+          dragSize: dragSize,
+        },
+      });
+    });
+  </script>
+
+  <script src="dist/js/main.js"></script>
+</html>

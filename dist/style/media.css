@@ -1,0 +1,189 @@
+@media only screen and (max-width: 768px) {
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #f2f2f2;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        z-index: 200;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+    }
+
+    .menu.show {
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        height: calc(100vh - 50px);
+        justify-content: center;
+        padding: 0;
+
+        background-color: #141024;
+    }
+
+    .menu li {
+        padding: 5px 10px;
+        font-size: 30px;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 8px 10px;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .hamburger-menu button {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-num {
+        display: none;
+    }
+
+    header {
+        overflow: hidden;
+        padding-top: 10px
+    }
+
+    .header-block {
+        flex-wrap: wrap;
+    }
+
+    .header-block div.header-desc {
+        position: relative;
+        z-index: 4;
+        padding: 0 10px;
+        align-items: center;
+    }
+
+    .header-block div.header-img {
+        align-items: center;
+    }
+
+    .header-img .back {
+        top: 0;
+    }
+
+    .about-desc {
+        max-width: 100%;
+        font-size: 17px;
+        line-height: 25px;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem;
+    }
+
+    .about .count-card {
+        text-align: center;
+    }
+
+    .about .count {
+        font-size: 40px;
+    }
+
+    .about .count-desc {
+        font-size: 15px;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: auto;
+        max-height: 225px;
+    }
+
+    .swiper-nav {
+        margin-top: 0;
+    }
+
+    .after-course .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .header-desc h1 {
+        font-size: 2.5rem;
+    }
+
+    .after-course .card-title {
+        font-size: 19px;
+    }
+
+    .after-course .card-desc {
+        font-size: 16px;
+
+    }
+
+    .header-desc p {
+        font-size: 15px;
+    }
+
+    h4.main-titles {
+        font-size: 30px;
+    }
+
+    .price .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .price .d-flex .price-card {
+        height: 330px !important;
+    }
+
+    .contact .d-flex {
+        flex-wrap: wrap;
+    }
+
+    .info {
+        margin-bottom: 20px;
+    }
+
+    .info h5 {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .copyright {
+        padding: 10px;
+    }
+
+    .copyright .logo {
+        width: auto;
+        display: block;
+    }
+
+    .copyright .nav-num {
+        display: block;
+    }
+
+    .copyright-syb {
+        margin: 0;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .swiper-slide img {
+
+        max-height: max-content;
+    }
+}

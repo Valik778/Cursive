@@ -1,0 +1,601 @@
+/* Загальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1250px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #D52027;
+}
+
+a.bg-red:hover {
+    color: #D52027 !important;
+    background-color: #fff !important;
+}
+
+.mb-5 {
+    margin-bottom: 5rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.text-end {
+    text-align: end;
+}
+
+/* Стилі для навігаційної панелі */
+.logo h4 {
+    margin: 0;
+    color: rgba(255, 255, 255, 1);
+}
+
+.navbar, .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5rem;
+    background-color: #141024;
+}
+
+.logo img {
+    max-width: 100px;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    margin: 0;
+}
+
+
+.menu li a {
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    color: #D52027;
+}
+
+.menu li a.btn-gray {
+    padding: 18px;
+    border-radius: 3px;
+    background: #DDDBDA;
+}
+
+
+.hamburger-menu button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #fff;
+}
+
+header {
+    color: #fff;
+    background: #141024;
+    height: calc(100vh - 109px);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.header-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.header-desc>* {
+    margin: 0;
+}
+
+.header-desc h1 {
+    font-size: 4rem;
+}
+
+.header-desc p {
+    font-size: 20px;
+}
+
+.header-block {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-block>div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-block div.header-desc {
+    max-width: 516px;
+}
+
+a.btn {
+    display: inline-block;
+    background: #D52027;
+    padding: 25px 54px;
+    text-align: center;
+    width: 215px;
+    border-radius: 4px;
+}
+
+.header-img {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 516px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-img .front {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    /* Перемістимо зображення вперед */
+}
+
+.header-img .back {
+    position: absolute;
+    bottom: 0;
+    /* right: 0; */
+    transform: translateX(-50%);
+    height: 80%;
+    z-index: 0;
+    opacity: 0.5;
+    animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.about, .after-course, .coaches, .price, .contact .d-flex {
+    padding: 0 10px;
+}
+
+.about-desc {
+    max-width: 60%;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 48px;
+}
+
+.about .d-flex {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.about .count {
+    margin: 0;
+    font-size: 70px;
+    color: rgba(213, 32, 39, 1);
+    font-weight: 600;
+}
+
+.about .count-desc {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.about .count-card {
+    flex: 1 1 260px
+}
+
+h4.main-titles {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.after-course .d-flex {
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.after-course .card {
+    flex: 1 1 250px;
+}
+
+.after-course .card-title {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.after-course .card-desc {
+    font-weight: 400;
+    font-size: 18px;
+    color: rgba(20, 16, 36, 0.7);
+}
+
+.coaches {
+    overflow-x: hidden !important;
+}
+
+.swiper-container {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    border-radius: 2px;
+    height: 5px;
+    width: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-slide img {
+    border-radius: 20px;
+    width: 360px;
+    height: 500px;
+}
+
+.swiper-slide p {
+    margin: 0;
+}
+
+.swiper-card-info {
+    margin-top: 15px;
+}
+
+.swiper-card-info>*:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.swiper-slide a.swiper-btn {
+    color: #D52027;
+}
+
+.swiper-slide a.swiper-btn:hover {
+    color: rgba(20, 16, 36, 1);
+}
+
+.swiper-card-title {
+    font-size: 20px;
+    color: rgba(20, 16, 36, 1);
+    font-weight: 600;
+}
+
+.swiper-card-desc {
+    color: rgba(20, 16, 36, 0.7);
+    font-weight: 400;
+}
+
+
+.swiper-scrollbar {
+    background: #d6d6d6;
+}
+
+.swiper-container-horizontal>.swiper-scrollbar {
+    border-radius: 2px;
+    height: 5px;
+    width: 200px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-nav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.swiper-button-next, .swiper-button-prev, .swiper-scrollbar {
+
+    position: inherit !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    margin-top: 0 !important;
+    width: 25px !important;
+    height: 25px !important;
+    background-size: 13px 15px !important;
+    background-color: #000;
+    border-radius: 50%;
+}
+
+.swiper-button-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-container-horizontal .swiper-scrollbar {
+    height: 5px;
+    width: 50%;
+    transform: translateX(0%) !important;
+}
+
+
+/* modal */
+
+
+.modal {
+    display: none;
+    /* З початку вікно приховане */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-body {
+    border-radius: 20px;
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 768px;
+}
+
+.close {
+    float: right;
+    color: rgba(20, 16, 36, 0.7);
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.modal-coucher {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.modal-coucher-img img {
+    border-radius: 20px;
+    width: 160px;
+    height: 222px;
+}
+
+.modal-coucher-info .d-flex {
+    gap: 10px;
+}
+
+.modal-coucher-info .d-flex img {
+    width: 25px;
+}
+
+.modal-coucher-info p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.modal-coucher-info .title {
+    font-weight: 600;
+}
+
+.modal-coucher-info p:not(.title) {
+    color: rgba(20, 16, 36, 0.7);
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Сховати всі таби по замовчуванню, крім активного табу */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(20, 16, 36, 0.11);
+
+}
+
+.tabs-content {
+    max-height: 240px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    /* для Firefox */
+}
+
+/* Підбір вигляду полоси прокрутки у Chrome, Edge та Safari */
+.tabs-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabs-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.tabs-content::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    border: 2px solid #f1f1f1;
+}
+
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* Стилі для вигляду табів та активного табу */
+.tablinks {
+    font-weight: bold;
+    font-size: 17px;
+    border: 0;
+    background: 0;
+    cursor: pointer;
+    color: rgba(20, 16, 36, 0.2);
+}
+
+.tablinks:hover {
+    color: rgba(20, 16, 36, 1);
+}
+
+.tablinks.active {
+    color: #D52027;
+}
+
+
+
+/* modal  end*/
+
+.price .d-flex {
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.price .d-flex .price-card {
+    padding: 25px;
+    text-align: center;
+    border-radius: 20px;
+    max-width: 360px;
+    width: 100%;
+    border: 1px solid rgba(20, 16, 36, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 460px;
+}
+
+.price .d-flex .price-card:first-child {
+    color: #fff;
+    background-color: rgba(20, 16, 36, 1);
+    border: 0;
+    height: 500px;
+}
+
+.price .d-flex .price-card p {
+    margin: 0;
+}
+
+.price .d-flex .price-card p.price-title {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.price .d-flex .price-card p.price-count {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.price .d-flex .price-card p.price-desc {
+    margin-bottom: 1.7rem;
+}
+
+.price .d-flex .price-card a.btn {
+    display: block;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.price .d-flex .price-card:not(:first-child) a.btn:hover {
+    background-color: rgba(20, 16, 36, 1);
+}
+
+/* footer */
+
+
+
+.contact {
+    background-color: rgba(213, 32, 39, 1);
+    padding: 60px 0;
+}
+
+.contact .d-flex {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info h5 {
+    font-size: 36px;
+    width: 80%;
+    margin: 0;
+}
+
+.info {
+    color: #fff;
+}
+
+.contact-form {
+    max-width: 500px;
+    width: 100%;
+}
+
+.contact-form form {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.contact-form form * {
+    border-radius: 5px;
+}
+
+.contact-form form input {
+    border: 0;
+    padding: 15px;
+}
+
+.contact-form form button {
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    padding: 24px 0;
+    background-color: rgba(20, 16, 36, 1);
+}
+
+.copyright-syb {
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
