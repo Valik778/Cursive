@@ -2,7 +2,7 @@
 function toggleMenu() {
     var menu = document.querySelector('.menu');
     var logo = document.querySelector('.logo');
-    var menuButton = document.querySelector('.hamburger-menu button');
+    var menuButton = document.querySelector('.click-menu button');
     var logoTitle = document.querySelector('.logo h4');
     menu.classList.toggle('show');
 
@@ -16,37 +16,37 @@ function toggleMenu() {
         menuButton.innerHTML = '&#9776;'; // Змінюємо значок на початковий "☰"
     }
 }
-// собираем все якоря; устанавливаем время анимации и количество кадров
+// збираємо всі якорі; встановлюємо час анімації та кількість кадрів
 const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
     animationTime = 300,
     framesCount = 20;
 
 anchors.forEach(function (item) {
-    // каждому якорю присваиваем обработчик события
+    // кожному якір присвоюємо обробник події
     item.addEventListener('click', function (e) {
-        // убираем стандартное поведение
+        // прибираємо стандартну поведінку
         e.preventDefault();
         toggleMenu();
 
-        // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
+        // для кожного якоря беремо відповідний елемент і визначаємо його координату Y
         let coordY = document.querySelector(item.getAttribute('href')).getBoundingClientRect().top + window.pageYOffset;
 
-        // запускаем интервал, в котором
+        // запускаємо інтервал, у якому
         let scroller = setInterval(function () {
-            // считаем на сколько скроллить за 1 такт
+            // вважаємо на скільки скролити за 1 такт
             let scrollBy = coordY / framesCount;
 
-            // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-            // и дно страницы не достигнуто
+            // якщо кількість пікселів для скролла за 1 такт більше відстані до елемента
+             // і дно сторінки не досягнуто
             if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
-                // то скроллим на к-во пикселей, которое соответствует одному такту
+                // то скролимо на кількість пікселів, яке відповідає одному такту
                 window.scrollBy(0, scrollBy);
             } else {
-                // иначе добираемся до элемента и выходим из интервала
+                //інакше добираємось до елемента та виходимо з інтервалу
                 window.scrollTo(0, coordY);
                 clearInterval(scroller);
             }
-            // время интервала равняется частному от времени анимации и к-ва кадров
+            // час інтервалу дорівнює приватному від часу анімації та к-ва кадрів
         }, animationTime / framesCount);
 
 
