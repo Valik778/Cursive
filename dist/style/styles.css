@@ -95,6 +95,7 @@ header {
     display: flex;
     justify-content: center;
     padding-top: 50px;
+    overflow: hidden;
 }
 
 .header-desc {
@@ -102,6 +103,8 @@ header {
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
+
+    padding: 0 10px;
 }
 
 .header-desc>* {
@@ -117,6 +120,7 @@ header {
 }
 
 .header-block {
+    gap: 20px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -267,8 +271,9 @@ h4.main-titles {
 
 .swiper-slide img {
     border-radius: 20px;
-    width: 360px;
-    height: 500px;
+    /* width: 360px;
+    height: 500px; */
+    width: 100%;
 }
 
 .swiper-slide p {

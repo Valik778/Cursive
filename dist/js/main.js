@@ -24,7 +24,7 @@ const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
 anchors.forEach(function (item) {
     // кожному якір присвоюємо обробник події
     item.addEventListener('click', function (e) {
-        // прибираємо стандартну поведінку
+        // убираем стандартное поведение
         e.preventDefault();
         toggleMenu();
 
@@ -37,12 +37,12 @@ anchors.forEach(function (item) {
             let scrollBy = coordY / framesCount;
 
             // якщо кількість пікселів для скролла за 1 такт більше відстані до елемента
-             // і дно сторінки не досягнуто
+            // і дно сторінки не досягнуто
             if (scrollBy > window.pageYOffset - coordY && window.innerHeight + window.pageYOffset < document.body.offsetHeight) {
                 // то скролимо на кількість пікселів, яке відповідає одному такту
                 window.scrollBy(0, scrollBy);
             } else {
-                //інакше добираємось до елемента та виходимо з інтервалу
+                // інакше добираємось до елемента та виходимо з інтервалу
                 window.scrollTo(0, coordY);
                 clearInterval(scroller);
             }
